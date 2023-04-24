@@ -43,6 +43,30 @@ body, html {
     animation: middlebg 2000ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
 }
 
+.ytembed {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 58%;
+    left: 50%;
+    border-radius: 20px;
+    z-index: 4;
+    animation: ytvideo 2000ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+}
+
+.ytborder {
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 58%;
+    left: 50%;
+    border-radius: 24px;
+    border-color: white;
+    width: 570px;
+    height: 325px;
+    border-width: 40px;
+    z-index: 3;
+    animation: ytvideo 2050ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+}
 
 
 @font-face{
@@ -104,6 +128,21 @@ body, html {
     }
     100% {
         opacity: 70%;
+    }
+}
+
+@keyframes ytvideo {
+    0% {
+        transform: translate(-50%, -40%);
+        opacity: 0%;
+    }
+    80% {
+        transform: translate(-50%, -40%);
+        opacity: 0%;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 100%;
     }
 }
 
