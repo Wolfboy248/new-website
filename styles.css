@@ -31,32 +31,61 @@ body, html {
     z-index: 5;
 }
 
+.youtubebutton {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    top: 15%;
+    left: 50%;
+    font-family: quicksand;
+    font-size: 40px;
+    color: white;
+    animation: ytbutton 4000ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+    transition: all 0.1s ease-in-out;
+}
+
+.youtubebutton:hover {
+    color: rgb(255, 50, 50);
+	text-shadow: 0 1px 20px rgb(255, 50, 50);
+}
+
 .middlebg {
     background-color: rgb(30,30,30);
-    height: 400px;
+    height: 450px;
     width: 100%;
     position: absolute;
     left: 50%;
     top: 58%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     opacity: 70%;
-    animation: middlebg 2000ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+    animation: middlebg 2600ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
 }
 
 .ytembed {
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     top: 58%;
     left: 50%;
     border-radius: 20px;
     z-index: 4;
-    animation: ytvideo 2000ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+    animation: ytvideo 2800ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+}
+
+.newvideo {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 38.5%;
+    left: 50%;
+    z-index: 7;
+    font-size: 50px;
+    font-family: quicksand-bold;
+    color: white;
+    animation: newvideo 2850ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
 }
 
 .ytborder {
     background-color: white;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -31%);
     top: 58%;
     left: 50%;
     border-radius: 24px;
@@ -65,7 +94,7 @@ body, html {
     height: 325px;
     border-width: 40px;
     z-index: 3;
-    animation: ytvideo 2050ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+    animation: ytvideobg 2505ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
 }
 
 
@@ -123,29 +152,72 @@ body, html {
 @keyframes middlebg {
     0% {
         opacity: 0%;
-        transform: translate(-50%, -30%);
+        transform: translate(-50%, -25%);
     }
-    60% {
+    80% {
+        height: 450px;
         opacity: 0%;
-        transform: translate(-50%, -30%);
+        transform: translate(-50%, -25%);
     }
     100% {
-        opacity: 70%;
+        height: 450px;
+        transform: translate(-50%, -45%);
     }
 }
 
 @keyframes ytvideo {
     0% {
-        transform: translate(-50%, -40%);
+        transform: translate(-50%, -20%);
         opacity: 0%;
     }
-    80% {
-        transform: translate(-50%, -40%);
+    85% {
+        opacity: 0%;
+        transform: translate(-50%, -20%);
+    }
+    100% {
+        transform: translate(-50%, -30%);
+    }
+}
+
+@keyframes ytvideobg {
+    0% {
+        transform: translate(-50%, -20%);
+        opacity: 0%;
+    }
+    85% {
+        opacity: 0%;
+        transform: translate(-50%, -20%);
+    }
+    100% {
+        transform: translate(-50%, -31%);
+    }
+}
+
+@keyframes ytbutton {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+        top: 18%;
+    }
+    75% {
         opacity: 0%;
     }
     100% {
-        transform: translate(-50%, -50%);
         opacity: 100%;
     }
 }
 
+@keyframes newvideo {
+    0% {
+        opacity: 0%;
+    }
+    75% {
+        top: 50%;
+        opacity: 0%;
+    }
+    92% {
+        opacity: 0%;
+    }
+}
