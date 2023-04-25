@@ -11,9 +11,9 @@ body, html {
   position: absolute;
   font-family: quicksand-bold;
   font-size: 50px;
-  top: 3%;
+  top: 6%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
   animation: top-bar 2000ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
@@ -46,6 +46,40 @@ body, html {
 .youtubebutton:hover {
     color: rgb(255, 50, 50);
 	text-shadow: 0 1px 20px rgb(255, 50, 50);
+}
+
+.steambutton {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    top: 15%;
+    left: 35%;
+    font-family: quicksand;
+    font-size: 40px;
+    color: white;
+    animation: ytbutton 4250ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+    transition: all 0.1s ease-in-out;
+}
+
+.steambutton:hover {
+    color: rgb(0, 173, 238);
+	text-shadow: 0 1px 20px rgb(0, 173, 238);
+}
+
+.speedrunbutton {
+    position: absolute;
+    transform: translate(-50%, 0%);
+    top: 15%;
+    left: 67%;
+    font-family: quicksand;
+    font-size: 40px;
+    color: white;
+    animation: ytbutton 4250ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+    transition: all 0.1s ease-in-out;
+}
+
+.speedrunbutton:hover {
+    color: rgb(0, 158, 123);
+	text-shadow: 0 1px 30px rgb(0, 158, 123);
 }
 
 .middlebg {
@@ -121,19 +155,24 @@ body, html {
         transform: translate(-50%, -50%);
         opacity: 0%;
         top: 50%;
+        left: 50%;
     }
     40% {
         opacity: 100%;
         transform: translate(-50%, -50%);
         top: 50%;
+        left: 50%;
     }
     50%{
         transform: translate(-50%, -50%);
         top: 50%;
+        left: 50%;
     }
     100% {
-        transform: translate(-50%, 0%);
+        transform: translate(-50%, -50%);
         opacity: 100%;
+        left: 50%;
+        top: 6%;
     }
 }
 
