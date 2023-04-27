@@ -6,6 +6,21 @@ body, html {
     background-color: black;
 }
 
+.bg-toggle {
+    background-color: blue;
+    color: white;
+    font-family: quicksand;
+    font-size: 30px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 92%;
+    left: 95%;
+    width: 60px;
+    height: 60px;
+}
+
 .bg {
     background-image: url(background.jpg);
     background-size: cover;

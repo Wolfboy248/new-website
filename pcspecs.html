@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
+    
 </head>
 <body>
     <body>
@@ -14,7 +15,8 @@
             <div class="header"></div>
         </header>
         <!--<div class="bg"></div> not used anymore-->
-        <div class="bg"></div>
+        <div id="bg" style="transition: all 0.2s ease-in-out;" class="bg"></div>
+        
         <a href="el phrog.png" download=><div class="top-bar">PC Specs</div></a>
         <a href="index.html"><div class="home-icon"></div></a>
         <a target="blank" href="https://youtu.be/iVSmnWuDBBc"><div class="youtubebutton">Youtube</div></a>
@@ -49,5 +51,55 @@
             </div>
         </div>
     </div>
+
+    <button class="bg-toggle" id="test-button">
+    </button>
+
+    <button type="hidden" class="bg-toggle" style="background-color: red; opacity: 100%; top: 92%;" id="test-button2">
+    </button>
 </body>
+
+<script>
+    const bg = document.querySelector('#bg');
+    console.log(bg.style);
+
+    const testBtn = document.querySelector('#test-button');
+    const testBtn2 = document.querySelector('#test-button2')
+    const opacity = localStorage.getItem("opacity");
+    
+
+    if (opacity) {
+    bg.style.opacity = opacity;
+    testBtn2.style.opacity = opacity == 0 ? 1 : 0;
+    }
+
+    console.log(testBtn.style);
+
+
+
+
+    testBtn2.style.opacity = '0';
+    
+    testBtn.addEventListener('click', () => {
+        bg.style.opacity = '0%';
+        testBtn.type.hidden = false;
+        testBtn2.style.top = '92%';
+        sessionStorage.setItem(bg, opacity);
+
+        // Save the opacity value to localStorage
+        localStorage.setItem("opacity", 0);
+    });
+
+    testBtn2.addEventListener('click', () => {
+        bg.style.opacity = '100%';
+        testBtn.style.opacity = '100%';
+        testBtn.type.hidden = false;
+        testBtn.style.top = '92%';
+        testBtn2.style.top = '-10000%';
+        testBtn.style.backgroundColor = 'blue';
+
+        // Save the opacity value to localStorage
+        localStorage.setItem("opacity", 1);
+    });
+</script>
 </html>
