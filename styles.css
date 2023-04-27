@@ -6,7 +6,41 @@ body, html {
     background-color: black;
 }
 
+#game {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    height: 500;
+    transform: translate(-50%, -50%);
+}
 
+.tetris-bg {
+    background-color: rgb(30,30,30);
+    width: 300;
+    height: 540;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 58%;
+    left: 50%;
+}
+
+.tetris-start {
+    background-color: rgba(30, 30, 30, 0.4);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-family: quicksand;
+    border-radius: 20px;
+    font-size: 40px;
+    user-select: none;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+    animation: tetrisStart 2000ms cubic-bezier(0.165, 0.183, 0.253, 0.946);
+}
 
 .bg-toggle {
     background-color: blue;
@@ -554,5 +588,23 @@ body, html {
     }
     100% {
         transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes tetrisStart {
+    0% {
+        opacity: 0;
+        top: 70%;
+    }
+    40% {
+        top: 70%;
+        opacity: 0;
+    }
+    65% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 100;
     }
 }
