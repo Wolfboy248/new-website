@@ -82,7 +82,7 @@ a:hover {
     font-size: 30px;
     border: none;
     border-radius: 30px;
-    position: absolute;
+    position: fixed;
     transform: translate(-50%, -50%);
     top: 92%;
     left: 95%;
@@ -586,7 +586,7 @@ a:hover {
         opacity: 0%;
     }
     75% {
-        top: 70%;
+        top: 90%;
     }
     85% {
         opacity: 0%;
@@ -594,7 +594,7 @@ a:hover {
     }
     100% {
         opacity: 100%;
-        top: 58%;
+        top: 75%;
     }
 }
 
