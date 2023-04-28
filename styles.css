@@ -2,7 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-color: black;
 }
 
@@ -75,6 +75,20 @@ a:hover {
     text-shadow: 0 1px 10px white;
 }
 
+.tetris-retry {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: quicksand;
+    font-size: 28px;
+    color: white;
+    transform: translate(-50%, -50%);
+    padding: 7px;
+    left: 50%;
+    width: 120px;
+    text-align: center;
+    user-select: none;
+}
+
 .bg-toggle {
     background-color: blue;
     color: white;
@@ -96,7 +110,7 @@ a:hover {
     background-size: cover;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
 }
 
 .home-icon {

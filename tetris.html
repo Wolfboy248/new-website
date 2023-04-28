@@ -41,6 +41,10 @@
             Start Game
            </div>
 
+           <div style="top: 65%; z-index: 100000; left: -10000%;" class="tetris-retry" id="retry-button">
+            Retry
+           </div>
+
            <div style="border-radius: 20px;" class="tetris-bg" id="tetris-bg">
            </div>
 
@@ -165,6 +169,10 @@ function placeTetromino() {
   tetromino = getNextTetromino();
 }
 
+const retryBtn = document.querySelector('#retry-button')
+
+retryBtn.style.opacity = '0';
+
 // show the game over screen
 function showGameOver() {
   cancelAnimationFrame(rAF);
@@ -176,10 +184,12 @@ function showGameOver() {
 
   context.globalAlpha = 1;
   context.fillStyle = 'white';
-  context.font = '36px monospace';
+  context.font = '36px quicksand-bold';
   context.textAlign = 'center';
   context.textBaseline = 'middle';
   context.fillText('GAME OVER!', canvas.width / 2, canvas.height / 2);
+  retryBtn.style.opacity = '1';
+  retryBtn.style.left = '50%';
 }
 
 const canvas = document.getElementById('game');
@@ -340,6 +350,13 @@ document.addEventListener('keydown', function(e) {
     tetromino.row = row;
   }
 });
+
+// retry game
+retryBtn.addEventListener('click', () => {
+    retryBtn.style.opacity = '0'
+    location.reload();
+    retryBtn.style.left = '-10000%';
+})
 
 // start the game
 
